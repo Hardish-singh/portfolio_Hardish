@@ -6,7 +6,7 @@ import cors from 'cors';
 import path from 'path';
 
 const app=express();
-const port =7000;
+const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
@@ -28,7 +28,7 @@ app.post('/api/feedBackForm',async(req,res)=>
         res.status(400).json({error:"internal server error"});
     }
 })
-app.listen(port,()=>
+app.listen(PORT,()=>
 {
     console.log("server is ready to respond");
 })
