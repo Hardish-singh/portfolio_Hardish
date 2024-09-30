@@ -20,10 +20,9 @@ mongoose.connect(uri, {
 })
 .then(() => console.log('MongoDB Atlas connected!'))
 .catch(err => console.error('MongoDB connection error:', err));
-app.get('/',(req,res)=>
-{
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
-})
+});
 
 app.post('/api/feedBackForm',async(req,res)=>
 {
