@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardish Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body >
+    <div class="loading-screen">
+        <!-- Loading spinner or animation can go here -->
+        <span id="welcomeMessage">Welcome</span>
+      </div>
+<div class="main-content" style="display: none; " >
+
+    <header>
+        <nav class="containor">
+            <a href="index.html"><span class="box-logo">
+                <img  width="50px"src="img/image edited 4.png" alt="">
+            </span></a>
+            <span class="work-play ">
+                <span class="slider-bg"></span>
+                <span class="work" id="btn1" onclick="moveSlider('Work.html')">
+                    Work
+                </span>
+                <div class="play" id="btn2" onclick="moveSlider('Play.html')">
+                    Play
+                </div>
+            </span>
+            
+            <!-- <div class="home-about"> -->
+            <!-- <ul class="HA">
+                <li>Home</li>
+                <li>About</li>
+            </ul> -->
+            <div class="logo home-about" id="btnn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" color="#000000" fill="none">
+                    <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4 12L8 12M20 12L11 12M8 12L9.5 14L11 12M8 12L11 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        
+            <div id="slider">
+                <ul >
+                    <li class="ytn1"><a class="navi" href="index.html">Home</a></li>
+                    <div class="workpage">
+                        
+                    <Li class="ytn2"><a  class="navi"  href="Work.html#intro1"  target="contentframe2">About</a></Li>
+                    <li class="ytn3"><a  class="navi" href="Work.html#educ" target="contentframe2">Education</a></li>
+                    <li class="ytn4"><a class="navi" href="Work.html#ski" target="contentframe2">Skills</a></li>
+                    <li class="ytn5"><a  class="navi" href="Work.html#expu" target="contentframe2">Experience</a></li>
+                    </div>
+                    <div class="playpage">
+                    <li class="ytn5"><a  class="navi" href="Play.html#ed" target="contentframe">Side Projects</a></li>
+                    <li class="ytn5"><a  class="navi" href="play.html#ed2 " target="contentframe">CP</a></li>
+                    </div>
+                </ul>
+                <div class="svg1" id="closeBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" color="white" fill="none">
+                        <path d="M18 6L12 12M12 12L6 18M12 12L18 18M12 12L6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <div class="feed" id="feedbackBtn">
+        <svg class="feed1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" color="#000000" fill="none">
+            <path d="M14 6H22M18 2L18 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.09881 19.5C4.7987 19.3721 3.82475 18.9816 3.17157 18.3284C2 17.1569 2 15.2712 2 11.5V11C2 7.22876 2 5.34315 3.17157 4.17157C4.34315 3 6.22876 3 10 3H11.5M6.5 18C6.29454 19.0019 5.37769 21.1665 6.31569 21.8651C6.806 22.2218 7.58729 21.8408 9.14987 21.0789C10.2465 20.5441 11.3562 19.9309 12.5546 19.655C12.9931 19.5551 13.4395 19.5125 14 19.5C17.7712 19.5 19.6569 19.5 20.8284 18.3284C21.947 17.2098 21.9976 15.4403 21.9999 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M8 14H14M8 9H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+       </div>
+       <div class="modal" id="feedbackModal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeFormBtn">&times;</span>
+          <h2>Feedback Form</h2>
+          <form id="feedbackForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Feedback" required></textarea>
+            <button type="submit">Submit Feedback</button>
+          </form>
+          <div id="successMessage" class="success-message" style="display: none;">Thank you for your feedback!</div>
+        </div>
+      </div>
+    
+    <main id="mainContent" >
+        
+        <iframe name="contentframe2" id="contentFrame" class="hr" src="Work.html"  frameborder="0"></iframe>
+        <div class="load-screen">
+            <h1>Play</h1>
+        </div>
+        <iframe name="contentframe"  id="contentFrame" src="" frameborder="0"></iframe>
+    </main>
+    
+</div>
+
+<!-- <script src="index.js"></script> -->
+    <script src="script.js"></script>
+    <script src="slider.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
