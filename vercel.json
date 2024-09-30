@@ -1,6 +1,17 @@
 {
     "version": 2,
     "routes": [
-      { "src": "/(.*)", "dest": "/server.js" }
-    ]
-  }
+        {
+          "src": "/api/(.*)",  
+          "dest": "/api/$1.js"
+        },
+        {
+          "src": "/(.*)",  
+          "dest": "/public/$1"
+        },
+        {
+          "src": "/",
+          "dest": "/public/index.html"
+        }
+      ]
+    }
