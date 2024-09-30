@@ -7,7 +7,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 dotenv.config();
 const app=express();
-const PORT =  3000;
+// const PORT =  3000;
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
@@ -35,7 +35,7 @@ app.post('/api/feedBackForm',async(req,res)=>
         res.status(400).json({error:"internal server error"});
     }
 })
-app.listen(PORT,()=>
-{
-    console.log("server is ready to respond");
-})
+// app.listen(PORT,()=>
+// {
+//     console.log("server is ready to respond");
+// })
